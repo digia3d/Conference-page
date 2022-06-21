@@ -350,3 +350,282 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+
+@media only screen and (min-width: 768px) {
+  .bancontent {
+    padding: 30px;
+  }
+
+  .bangreeting {
+    padding: 10px;
+  }
+
+  .bancontactinfo {
+    padding: 10px;
+  }
+
+  .worksdesc {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .works {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .works li {
+    margin: 0;
+  }
+
+  .footer {
+    background-color: #272A31;
+  }
+
+  .footertext {
+    color: white;
+    align-items: center;
+  }
+
+  .partners {
+    display: none;
+  }
+
+  .navlinks {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-white);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .facts {
+    flex-direction: column;
+    padding: 50px 40px;
+  }
+
+  .toplinks {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    background-color: var(--text-darkgray);
+    color: var(--color-white);
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+
+  .sociallinks a {
+    color: var(--color-white);
+    margin: 5px;
+    width: 100%;
+  }
+
+  .menu-closebtn {
+    display: none;
+  }
+
+  .toplink a {
+    color: var(--color-white);
+    margin: 5px;
+    width: 100%;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+
+  .item {
+    margin-right: 40px;
+  }
+
+  .list a {
+    color: var(--text-gray);
+  }
+
+  .item.active {
+    color: var(--color-coral);
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .logocontainer img {
+    display: block;
+    width: 20%;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .planheader {
+    text-align: center;
+    justify-content: center;
+    color: var(--color-white);
+    padding: 50px;
+    padding-bottom: 10px;
+  }
+
+  .plancard {
+    list-style-type: none;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .planimg {
+    width: 100%;
+    text-align: center;
+  }
+
+  .plantitle {
+    text-align: center;
+    width: 100%;
+  }
+
+  .planmore {
+    display: block;
+    color: var(--color-white);
+    text-align: center;
+    margin: 50px;
+    text-decoration: underline;
+  }
+
+  .planmore:hover {
+    color: var(--color-coral);
+  }
+
+  .ourplan {
+    background-color: var(--color-dark);
+    padding: 50px 200px;
+  }
+
+  .plan-card {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .planbtn {
+    display: none;
+  }
+
+  .plantext {
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner {
+    min-height: 80vh;
+    background-color: rgb(211, 211, 211, 0.8);
+  }
+
+  .banner::before {
+    content: "";
+    background: url("img/homepageimg.png");
+    background-size: cover;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .speakerslist {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    padding: 0 10vw;
+    list-style-type: none;
+  }
+
+  .morebtn {
+    display: none;
+  }
+
+  .bancontent {
+    padding: 100px;
+    font-family: "lato", sans-serif;
+  }
+
+  .banmsg {
+    font-size: 24px;
+  }
+
+  .desctop {
+    font-size: 14px;
+    width: 60%;
+    padding: 10px;
+    border-style: solid;
+    border-color: var(--color-white);
+    font-family: "lato", sans-serif;
+  }
+
+  .bancontent h1,
+  .bancontent h2,
+  .bancontent h4 {
+    font-family: "lato", sans-serif;
+    padding: 35px;
+  }
+
+  .bancontent h1 {
+    font-size: 45px;
+    font-family: "COCOGOOSE", sans-serif;
+  }
+
+  .bancontent h2 {
+    font-weight: bolder;
+    color: var(--color-gray);
+  }
+
+  .partners {
+    background-color: var(--text-darkgray);
+    padding: 20px;
+  }
+
+  .partnerhead {
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 40px;
+  }
+
+  .partnerlogo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .parlogo {
+    width: 18%;
+    font-size: 20px;
+    height: 30%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .facts.hide {
+    display: flex;
+  }
+
+  .home {
+    display: none;
+  }
+
+  .cbtn {
+    border-style: solid;
+    border-color: var(--color-coral);
+    color: var(--color-coral);
+    background-color: var(--color-white);
+  }
+}
+
