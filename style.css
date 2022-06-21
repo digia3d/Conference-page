@@ -10,332 +10,111 @@
   --text-darkgray: #565656;
 }
 
-body {
-  font-family: "Lato", sans-serif;
-  width: 100%;
-}
-
-.toplinks {
-  display: none;
-}
-
-.navlinks {
-  display: flex;
-  flex-direction: row;
-  background-color: rgb(211, 211, 211, 0.8);
-}
-
-.hamburger {
+.bannerho {
+  background-size: cover;
+  background-color: rgb(211, 211, 211, 0.4);
   position: relative;
-  display: flex;
-  align-items: center;
-  font-size: 30px;
-  color: var(--text-darkgray);
-  margin: 10px;
 }
 
-.list.active {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 0;
-  width: 100%;
-  height: 100vh;
-  color: var(--color-white);
-  background: var(--color-dark);
-  z-index: 20;
-}
-
-.list.active .menu-closebtn {
-  display: flex;
-  flex-direction: row-reverse;
-  width: 100%;
-  padding: 10px;
-  text-align: right;
-}
-
-.list.active .item {
-  color: var(--color-white);
-}
-
-.list.active .cbtn {
-  display: none;
-}
-
-.list.active li {
-  margin: 15px 0;
-  font-size: 14px;
-}
-
-.list .times.icon {
-  font-size: 20px;
-}
-
-.list.active a {
-  font-size: 2rem;
-  color: var(--color-white);
-}
-
-.list.active a:hover {
-  color: var(--color-coral);
-}
-
-.banner {
-  min-height: 50vh;
-  background-color: rgb(211, 211, 211, 0.8);
-  background-size: cover;
-}
-
-.banner::before {
+.bannerho::before {
   content: "";
-  background: url("images/Home-page.png");
+  background-image: url(images/marketing.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  opacity: 70%;
+  opacity: 0.5;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  height: 80vh;
   position: absolute;
   z-index: -1;
 }
 
-.bancontent {
-  padding: 10px;
-  font-weight: 700;
-  color: var(--text-darkgray);
-  z-index: 2;
-}
-
-.bancontent h1 {
-  text-transform: uppercase;
-  background-repeat: repeat;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  -webkit-font-smoothing: antialiased;
-  font-size: 2rem;
-  background-image: url(images/home-page.jpg);
-  font-family: "COCOGOOSE", sans-serif;
-  font-weight: 900;
-}
-
-.desctop {
-  font-size: 14px;
-  width: 100%;
-  padding: 10px;
-  border-style: solid;
-  border-color: var(--color-white);
+.bancontentho {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
   font-family: "Lato", sans-serif;
+  padding: 2px;
 }
 
-.bancontent h2 {
-  font-weight: 900;
-  width: 100%;
-  text-transform: uppercase;
+.banmsgho {
+  margin: 20px;
+  color: var(--text-coral);
+}
+
+.description {
+  width: 80%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-left: 10%;
+  border-style: solid;
+  border-color: var(--bg-gray);
+  background-color: var(--color-white);
 }
 
 .bancontent h4 {
-  margin: 0;
-  padding: 35px;
+  font-weight: bold;
+  font-family: "lato", sans-serif;
+  text-decoration: underline;
 }
 
-.facts {
+.container {
+  margin: 30px;
+  display: flex;
   flex-direction: column;
-  margin: 50px 0;
 }
 
-.facts h2 {
+.fheading {
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  margin: 20px;
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
 }
 
-.morebtn {
-  background-color: var(--color-white);
-  width: 95%;
-  margin-bottom: 30px;
-  margin-top: 30px;
+.abdesc {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  margin: 30px;
+  padding: 20px;
+}
+
+.container img {
+  width: 60%;
   border-style: solid;
   border-color: var(--bg-gray);
-  font-family: "lato", sans-serif;
-  height: 50px;
-  margin-left: 10px;
-}
-
-.chevron {
-  color: var(--color-coral);
-}
-
-.banmsg {
-  font-weight: normal;
-  color: var(--text-coral);
-  background: url("img/homepageimg.png") no-repeat center center;
-  background-size: cover;
-  background-clip: content-box;
-  -webkit-text-fill-color: #ec5242;
-  -webkit-background-clip: text;
-  -webkit-font-smoothing: antialiased;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-.logocontainer img {
-  display: none;
-}
-
-.logomenu {
-  display: flex;
-  flex-direction: row;
-}
-
-.list {
-  display: none;
-  flex-direction: column;
-  list-style-type: none;
-  margin: 10px;
-  width: 100%;
-}
-
-.ourplan {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: auto;
-  padding: 50px 20px;
-  color: var(--color-white);
-  background: var(--color-dark);
-}
-
-.planheader {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.plancard {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  margin: 1px;
-  list-style: none;
-  padding: 12px;
-  background: #3c3f46;
-  border: 2px solid #3c3f46;
-}
-
-.plancard:hover {
-  background: rgba(60, 63, 70, 0.8);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 2px;
-  border: 2px solid var(--color-white);
-}
-
-.plan-card {
-  flex-direction: column;
-}
-
-.planimg {
-  font-size: 32px;
-  padding: 5px;
-  margin-top: 10px;
-}
-
-.plantitle {
-  width: 35%;
-  text-align: center;
-  padding: 5px;
-  color: var(--color-coral);
-}
-
-.planmore {
-  display: none;
-}
-
-.planbtn {
-  font-weight: 600;
-  color: var(--color-white);
-  font-size: 20px;
-  margin-top: 20px;
-  padding: 20px 40px;
-  background: var(--color-coral);
-  border: none;
-  text-align: center;
-}
-
-.planbtn:hover {
-  color: var(--color-coral);
-  background: var(--color-white);
-  border: 2px solid var(--color-coral);
-}
-
-.plantext {
-  width: 50%;
-  text-align: left;
-}
-
-.partners {
-  background-color: var(--text-darkgray);
-  padding: 20px;
-  text-align: center;
-}
-
-.partnerhead {
-  text-align: center;
-  color: var(--text-gray);
-  font-size: 35px;
-}
-
-.partnerlogo {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-around;
-}
-
-.parlogo {
-  width: 18%;
-  height: 30%;
+  justify-self: center;
   text-align: center;
   align-items: center;
-  justify-content: center;
+  padding: 30px;
+  margin-left: 20%;
 }
 
-.speakerlist {
-  list-style-type: none;
-}
-
-.banfooter {
-  display: flex;
-  flex-direction: row;
-  width: fit-content;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  padding: 20px;
-}
-
-.banlogo {
+.foulogo {
   width: 20%;
 }
 
-.banfootertext {
-  width: 35%;
+hr {
+  color: var(--bg-gray);
 }
 
-.speaker.hide {
-  display: none;
+.foofooter {
+  background-color: white;
+}
+
+.footertext {
+  color: black;
 }
 
 .section-title {
   position: relative;
-  padding-bottom: 10px;
 }
 
 .section-title::after {
@@ -352,48 +131,7 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  .bancontent {
-    padding: 30px;
-  }
-
-  .bangreeting {
-    padding: 10px;
-  }
-
-  .bancontactinfo {
-    padding: 10px;
-  }
-
-  .worksdesc {
-    padding-top: 20px;
-    padding-bottom: 40px;
-  }
-
-  .works {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    padding-top: 20px;
-    padding-bottom: 40px;
-  }
-
-  .works li {
-    margin: 0;
-  }
-
-  .footer {
-    background-color: #272A31;
-  }
-
-  .footertext {
-    color: white;
-    align-items: center;
-  }
-
-  .partners {
-    display: none;
-  }
-
-  .navlinks {
+  .navbar {
     display: flex;
     flex-direction: row;
     background-color: var(--color-white);
@@ -401,9 +139,45 @@ body {
     padding-right: 40px;
   }
 
-  .facts {
-    flex-direction: column;
-    padding: 50px 40px;
+  .bannerho {
+    min-height: 85vh;
+  }
+
+  .bannerho::before {
+    content: "";
+    background-size: cover;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 105vh;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .bancontentho {
+    padding: 30px;
+    text-align: left;
+  }
+
+  .bancontentho h1 {
+    margin-left: 50px;
+    font-size: 41px;
+    padding-left: 60px;
+    text-transform: uppercase;
+    color: #f44c06;
+  }
+
+  .bancontentho h2,
+  .bancontentho h4 {
+    margin-left: 110px;
+  }
+
+  .banmsgho {
+    padding: 10px;
+    font-size: 24px;
+    margin-left: 86px;
   }
 
   .toplinks {
@@ -460,172 +234,37 @@ body {
 
   .logocontainer img {
     display: block;
-    width: 20%;
+    width: 11%;
     margin-left: 5px;
     margin-right: 5px;
   }
 
-  .planheader {
-    text-align: center;
-    justify-content: center;
-    color: var(--color-white);
-    padding: 50px;
-    padding-bottom: 10px;
+  .worksdescript {
+    padding-top: 20px;
+    padding-bottom: 40px;
   }
 
-  .plancard {
-    list-style-type: none;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
+  .works {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 20px;
+    padding-bottom: 40px;
   }
 
-  .planimg {
-    width: 100%;
-    text-align: center;
+  .works li {
+    margin: 0;
   }
 
-  .plantitle {
-    text-align: center;
-    width: 100%;
+  .foofooter {
+    background-color: #272a31;
   }
 
-  .planmore {
-    display: block;
-    color: var(--color-white);
-    text-align: center;
-    margin: 50px;
-    text-decoration: underline;
-  }
-
-  .planmore:hover {
-    color: var(--color-coral);
-  }
-
-  .ourplan {
-    background-color: var(--color-dark);
-    padding: 50px 200px;
-  }
-
-  .plan-card {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .planbtn {
-    display: none;
-  }
-
-  .plantext {
-    width: 100%;
-    text-align: center;
-  }
-
-  .banner {
-    min-height: 80vh;
-    background-color: rgb(211, 211, 211, 0.8);
-  }
-
-  .banner::before {
-    content: "";
-    background: url("img/homepageimg.png");
-    background-size: cover;
-    width: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100vh;
-    position: absolute;
-    z-index: -1;
-  }
-
-  .speakerslist {
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 20px;
-    padding: 0 10vw;
-    list-style-type: none;
-  }
-
-  .morebtn {
-    display: none;
-  }
-
-  .bancontent {
-    padding: 100px;
-    font-family: "lato", sans-serif;
-  }
-
-  .banmsg {
-    font-size: 24px;
-  }
-
-  .desctop {
-    font-size: 14px;
-    width: 60%;
-    padding: 10px;
-    border-style: solid;
-    border-color: var(--color-white);
-    font-family: "lato", sans-serif;
-  }
-
-  .bancontent h1,
-  .bancontent h2,
-  .bancontent h4 {
-    font-family: "lato", sans-serif;
-    padding: 35px;
-  }
-
-  .bancontent h1 {
-    font-size: 45px;
-    font-family: "COCOGOOSE", sans-serif;
-  }
-
-  .bancontent h2 {
-    font-weight: bolder;
-    color: var(--color-gray);
+  .footertext {
+    color: white;
+    align-items: center;
   }
 
   .partners {
-    background-color: var(--text-darkgray);
-    padding: 20px;
-  }
-
-  .partnerhead {
-    text-align: center;
-    color: var(--text-gray);
-    font-size: 40px;
-  }
-
-  .partnerlogo {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-  }
-
-  .parlogo {
-    width: 18%;
-    font-size: 20px;
-    height: 30%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .facts.hide {
-    display: flex;
-  }
-
-  .home {
     display: none;
   }
-
-  .cbtn {
-    border-style: solid;
-    border-color: var(--color-coral);
-    color: var(--color-coral);
-    background-color: var(--color-white);
-  }
 }
-
