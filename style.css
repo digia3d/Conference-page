@@ -10,6 +10,12 @@
   --text-darkgray: #565656;
 }
 
+* ::after,
+::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
 .bannerho {
   background-size: cover;
   background-color: rgb(211, 211, 211, 0.4);
@@ -86,6 +92,10 @@
   padding: 20px;
 }
 
+img {
+  border-style: none;
+}
+
 .container img {
   width: 60%;
   border-style: solid;
@@ -95,6 +105,136 @@
   align-items: center;
   padding: 30px;
   margin-left: 20%;
+}
+
+.factimg {
+  flex: 1;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+  max-height: 180px;
+  max-width: 180px;
+  background: url("img/micro.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 18px;
+}
+
+.factimg img {
+  display: block;
+  width: 85%;
+  height: 85%;
+}
+
+.facts {
+  flex-direction: column;
+  margin: 50px 0;
+}
+
+.fact {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.factinfo {
+  flex: 1.8;
+  height: auto;
+  padding: 2px;
+}
+
+.fact.hide {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h5 {
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  line-height: 1.28571429em;
+  margin: calc(2rem - 014285714em) 0 1rem;
+  font-weight: 700;
+  padding: 0;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 40px;
+}
+
+li {
+  display: list-item;
+  text-align: center;
+}
+
+::marker {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0 !important;
+  text-align: start !important;
+  text-align-last: start !important;
+}
+
+.factslist {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 50px;
+  list-style-type: none;
+  padding: 0 4vw;
+}
+
+.facthead {
+  margin: 40px 0 20px;
+}
+
+.chevron {
+  color: var(--color-coral);
+}
+
+.facts h2 {
+  text-align: center;
+}
+
+i.icon {
+  display: inline-block;
+  opacity: 1;
+  margin: 0 25rem 0 0;
+  width: 1.18em;
+  height: 1em;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: inherit;
+  text-align: center;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+button,
+html [type=button] {
+  -webkit-appearance: button;
+}
+
+.morebtn {
+  background-color: var(--color-white);
+  width: 95%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-style: solid;
+  border-color: var(--bg-gray);
+  font-family: "lato", sans-serif;
+  height: 50px;
+  margin-left: 10px;
 }
 
 .foulogo {
@@ -237,6 +377,26 @@ hr {
     width: 11%;
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .facts {
+    flex-direction: column;
+    padding: 50px 40px;
+  }
+
+  .factslist {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    padding: 0 10vw;
+    list-style-type: none;
+  }
+
+  .fact.hide {
+    display: flex;
+  }
+
+  .morebtn {
+    display: none;
   }
 
   .worksdescript {
