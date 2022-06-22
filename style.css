@@ -32,6 +32,12 @@
   }
 }
 
+.nav-p {
+  margin-left: -44vh;
+  margin-top: 1.3vh;
+  color: var(--text-darkgray);
+}
+
 .bannerho {
   background-size: cover;
   background-color: rgb(211, 211, 211, 0.4);
