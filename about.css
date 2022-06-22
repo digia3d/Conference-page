@@ -155,75 +155,6 @@ body {
   text-align: center;
 }
 
-.interfact {
-  margin: 40px 0 20px;
-}
-
-.interlist {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 50px;
-  list-style-type: none;
-  padding: 0 4vw;
-}
-
-.inter {
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-}
-
-.interimg {
-  flex: 1;
-  align-items: flex-end;
-  justify-content: flex-end;
-  height: 100%;
-  max-height: 180px;
-  max-width: 180px;
-  background: url("img/micro.png");
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: top left;
-  padding: 18px;
-}
-
-.interimg img {
-  display: block;
-  width: 85%;
-  height: 85%;
-}
-
-.interinfo {
-  flex: 1.8;
-  height: auto;
-  padding: 2px;
-}
-
-.intername {
-  font-size: 1.4rem;
-  color: var(--color-dark);
-  margin-bottom: 0;
-}
-
-.intertitle {
-  font-family: "lato", sans-serif;
-  font-style: italic;
-  font-weight: bold;
-  color: var(--color-coral);
-  font-size: 1.1rem;
-  margin-top: 0;
-}
-
-.interdesc {
-  font-size: 14px;
-  font-family: "lato", sans-serif;
-  color: var(--color-dark);
-}
-
-.hrinter {
-  width: 5px;
-}
-
 .morebtn {
   background-color: var(--color-white);
   width: 95%;
@@ -262,115 +193,6 @@ body {
   list-style-type: none;
   margin: 10px;
   width: 100%;
-}
-
-.ourplan {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: auto;
-  padding: 50px 20px;
-  color: var(--color-white);
-  background: var(--color-dark);
-}
-
-.planheader {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.plancard {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  margin: 1px;
-  list-style: none;
-  padding: 12px;
-  background: #3c3f46;
-  border: 2px solid #3c3f46;
-}
-
-.plancard:hover {
-  background: rgba(60, 63, 70, 0.8);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 2px;
-  border: 2px solid var(--color-white);
-}
-
-.plan-card {
-  flex-direction: column;
-}
-
-.planimg {
-  font-size: 32px;
-  padding: 5px;
-  margin-top: 10px;
-}
-
-.plantitle {
-  width: 35%;
-  text-align: center;
-  padding: 5px;
-  color: var(--color-coral);
-}
-
-.planmore {
-  display: none;
-}
-
-.planbtn {
-  font-weight: 600;
-  color: var(--color-white);
-  font-size: 20px;
-  margin-top: 20px;
-  padding: 20px 40px;
-  background: var(--color-coral);
-  border: none;
-  text-align: center;
-}
-
-.planbtn:hover {
-  color: var(--color-coral);
-  background: var(--color-white);
-  border: 2px solid var(--color-coral);
-}
-
-.plantext {
-  width: 50%;
-  text-align: left;
-}
-
-.partners {
-  background-color: var(--text-darkgray);
-  padding: 20px;
-  text-align: center;
-}
-
-.partnerhead {
-  text-align: center;
-  color: var(--text-gray);
-  font-size: 35px;
-}
-
-.partnerlogo {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-around;
-}
-
-.parlogo {
-  width: 18%;
-  height: 30%;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
 }
 
 .workscontainer {
@@ -421,7 +243,7 @@ body {
   color: #fff;
 }
 
-.foofooter {
+.foofooterab {
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -429,17 +251,19 @@ body {
   justify-content: center;
   margin: auto;
   padding: 20px;
+  background-color: black;
 }
 
 .foologo {
-  width: 20%;
+  width: 10%;
 }
 
-.footertext {
+.footertextab {
   width: 35%;
+  color: #fff;
 }
 
-.inter.hide {
+.fact.hide {
   display: none;
 }
 
@@ -459,6 +283,10 @@ body {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.partnersab {
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -493,11 +321,27 @@ body {
     width: 100%;
   }
 
+  .logo {
+    animation-duration: 2.5s;
+    animation-name: spin;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
   .menu-closebtn {
     display: none;
   }
 
-  .toplink a {
+  .toplinks a {
     color: var(--color-white);
     margin: 5px;
     width: 100%;
@@ -534,64 +378,24 @@ body {
     margin-right: 5px;
   }
 
-  .planheader {
-    text-align: center;
-    justify-content: center;
-    color: var(--color-white);
-    padding: 50px;
-    padding-bottom: 10px;
+  .worksdescript {
+    padding-top: 20px;
+    padding-bottom: 40px;
   }
 
-  .plancard {
-    list-style-type: none;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
+  .works {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 20px;
+    padding-bottom: 40px;
   }
 
-  .planimg {
-    width: 100%;
-    text-align: center;
-  }
-
-  .plantitle {
-    text-align: center;
-    width: 100%;
-  }
-
-  .planmore {
-    display: block;
-    color: var(--color-white);
-    text-align: center;
-    margin: 50px;
-    text-decoration: underline;
-  }
-
-  .planmore:hover {
-    color: var(--color-coral);
-  }
-
-  .ourplan {
-    background-color: var(--color-dark);
-    padding: 50px 200px;
-  }
-
-  .plan-card {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .planbtn {
-    display: none;
-  }
-
-  .plantext {
-    width: 100%;
-    text-align: center;
+  .works li {
+    margin: 0;
   }
 
   .banner {
-    min-height: 85vh;
+    min-height: 100vh;
   }
 
   .banner::before {
@@ -602,12 +406,12 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
-    height: 128vh;
+    height: 114vh;
     position: absolute;
     z-index: -1;
   }
 
-  .interlist {
+  .factslist {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
     padding: 0 10vw;
@@ -661,34 +465,7 @@ body {
     color: var(--color-gray);
   }
 
-  .partners {
-    background-color: var(--text-darkgray);
-    padding: 20px;
-  }
-
-  .partnerhead {
-    text-align: center;
-    color: var(--text-gray);
-    font-size: 40px;
-  }
-
-  .partnerlogo {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-  }
-
-  .parlogo {
-    width: 18%;
-    font-size: 20px;
-    height: 30%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .inter.hide {
+  .fact.hide {
     display: flex;
   }
 

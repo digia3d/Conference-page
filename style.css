@@ -16,6 +16,22 @@
   box-sizing: inherit;
 }
 
+.logo {
+  animation-duration: 2.5s;
+  animation-name: spin;
+  animation-iteration-count: 1;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .bannerho {
   background-size: cover;
   background-color: rgb(211, 211, 211, 0.4);
@@ -107,6 +123,90 @@ img {
   margin-left: 20%;
 }
 
+.ourplan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  padding: 50px 20px;
+  color: var(--color-white);
+  background: var(--color-dark);
+}
+
+.planheader {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.plancard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin: 1px;
+  list-style: none;
+  padding: 12px;
+  background: #3c3f46;
+  border: 2px solid #3c3f46;
+  transition: 0.3s ease-in-out;
+}
+
+.plancard:hover {
+  background: rgba(60, 63, 70, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 2px;
+  border: 2px solid var(--color-white);
+  transform: scale(1.02);
+}
+
+.plan-card {
+  flex-direction: column;
+}
+
+.planimg {
+  font-size: 32px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.plantitle {
+  width: 35%;
+  text-align: center;
+  padding: 5px;
+  color: var(--color-coral);
+}
+
+.planmore {
+  display: none;
+}
+
+.planbtn {
+  font-weight: 600;
+  color: var(--color-white);
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 20px 40px;
+  background: var(--color-coral);
+  border: none;
+  text-align: center;
+}
+
+.planbtn:hover {
+  color: var(--color-coral);
+  background: var(--color-white);
+  border: 2px solid var(--color-coral);
+}
+
+.plantext {
+  width: 50%;
+  text-align: left;
+}
+
 .factimg {
   flex: 1;
   align-items: flex-end;
@@ -114,11 +214,16 @@ img {
   height: 100%;
   max-height: 180px;
   max-width: 180px;
-  background: url("img/micro.png");
+  background: url("images/A3D-LOGO.png");
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: top left;
   padding: 18px;
+  transition: 0.3s ease-in-out;
+}
+
+.factimg:hover {
+  transform: scale(1.5);
 }
 
 .factimg img {
@@ -148,10 +253,21 @@ img {
   display: none;
 }
 
-h1,
-h2,
-h3,
-h5 {
+.facttitle p {
+  margin: 0 0 1em;
+  line-height: 1.4285em;
+}
+
+.factshead .section-title h2 {
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  line-height: 1.28571429em;
+  margin: calc(2rem - 014285714em) 0 1rem;
+  font-weight: 700;
+  padding: 0;
+  text-align: center;
+}
+
+.factname {
   font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
   line-height: 1.28571429em;
   margin: calc(2rem - 014285714em) 0 1rem;
@@ -159,7 +275,7 @@ h5 {
   padding: 0;
 }
 
-ul {
+.factlist ul {
   display: block;
   list-style-type: disc;
   margin-block-start: 1em;
@@ -169,7 +285,7 @@ ul {
   padding-inline-start: 40px;
 }
 
-li {
+.fact li {
   display: list-item;
   text-align: center;
 }
@@ -199,27 +315,6 @@ li {
   color: var(--color-coral);
 }
 
-.facts h2 {
-  text-align: center;
-}
-
-i.icon {
-  display: inline-block;
-  opacity: 1;
-  margin: 0 25rem 0 0;
-  width: 1.18em;
-  height: 1em;
-  font-size: 1em;
-  font-style: normal;
-  font-weight: 400;
-  text-decoration: inherit;
-  text-align: center;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
 button,
 html [type=button] {
   -webkit-appearance: button;
@@ -237,8 +332,9 @@ html [type=button] {
   margin-left: 10px;
 }
 
-.foulogo {
-  width: 20%;
+.foologo {
+  width: 10%;
+  border: 1px solid black;
 }
 
 hr {
@@ -247,6 +343,13 @@ hr {
 
 .foofooter {
   background-color: white;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
 }
 
 .footertext {
@@ -268,6 +371,33 @@ hr {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.partners {
+  background-color: var(--text-darkgray);
+  padding: 20px;
+  text-align: center;
+}
+
+.partnerhead {
+  text-align: center;
+  color: var(--text-gray);
+  font-size: 35px;
+}
+
+.partnerlogo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.parlogo {
+  width: 18%;
+  height: 30%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -342,7 +472,7 @@ hr {
     display: none;
   }
 
-  .toplink a {
+  .toplinks a {
     color: var(--color-white);
     margin: 5px;
     width: 100%;
@@ -377,6 +507,9 @@ hr {
     width: 11%;
     margin-left: 5px;
     margin-right: 5px;
+    animation-duration: 2.5s;
+    animation-name: spin;
+    animation-iteration-count: 1;
   }
 
   .facts {
@@ -399,32 +532,103 @@ hr {
     display: none;
   }
 
-  .worksdescript {
-    padding-top: 20px;
-    padding-bottom: 40px;
+  .planheader {
+    text-align: center;
+    justify-content: center;
+    color: var(--color-white);
+    padding: 50px;
+    padding-bottom: 10px;
   }
 
-  .works {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    padding-top: 20px;
-    padding-bottom: 40px;
+  .plancard {
+    list-style-type: none;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
   }
 
-  .works li {
-    margin: 0;
+  .planimg {
+    width: 100%;
+    text-align: center;
   }
 
-  .foofooter {
-    background-color: #272a31;
+  .planimg:hover {
+    transform: scale(1.02);
   }
 
-  .footertext {
-    color: white;
-    align-items: center;
+  .plantitle {
+    text-align: center;
+    width: 100%;
+  }
+
+  .planmore {
+    display: block;
+    color: var(--color-white);
+    text-align: center;
+    margin: 50px;
+    text-decoration: underline;
+  }
+
+  .planmore:hover {
+    color: var(--color-coral);
+  }
+
+  .plan-card {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .planbtn {
+    display: none;
+  }
+
+  .plantext {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ourplan {
+    background-color: var(--color-dark);
+    padding: 50px 200px;
   }
 
   .partners {
-    display: none;
+    background-color: var(--text-darkgray);
+    padding: 20px;
+  }
+
+  .partnerhead {
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 40px;
+  }
+
+  .partnerlogo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .parlogo {
+    width: 18%;
+    font-size: 20px;
+    height: 30%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .foulogo {
+    width: 10%;
+  }
+
+  .foofooter {
+    background-color: #fff;
+  }
+
+  .footertext {
+    color: var(--color-dark);
+    align-items: center;
   }
 }

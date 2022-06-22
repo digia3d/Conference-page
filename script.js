@@ -7,7 +7,7 @@ const menuItems = Array.from(document.querySelectorAll('.item'));
 const factdata = [
   {
     name: 'Introduction',
-    image: 'images/interestingfacts/intoduction.png',
+    image: 'images/interestingfacts/introduction.png',
     title: 'Facts, DM',
     description: 'Advertising strategies are constantly changing - blogs, brochures, television ads, Google ads, promotions on social networks…Online sales are more important than ever! That is why I have singled out a couple of interesting facts.',
   },
