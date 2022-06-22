@@ -112,17 +112,13 @@ body {
 
 .bancontent h1 {
   text-transform: uppercase;
-  background-repeat: repeat;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  -webkit-font-smoothing: antialiased;
   font-size: 2rem;
-  background-image: url(images/home-page.jpg);
   font-family: "COCOGOOSE", sans-serif;
   font-weight: 900;
+  color: var(--text-coral);
 }
 
-.desctop {
+.description {
   font-size: 14px;
   width: 100%;
   padding: 10px;
@@ -140,15 +136,6 @@ body {
 .bancontent h4 {
   margin: 0;
   padding: 35px;
-}
-
-.facts {
-  flex-direction: column;
-  margin: 50px 0;
-}
-
-.facts h2 {
-  text-align: center;
 }
 
 .morebtn {
@@ -306,10 +293,6 @@ body {
   justify-content: center;
 }
 
-.speakerlist {
-  list-style-type: none;
-}
-
 .banfooter {
   display: flex;
   flex-direction: row;
@@ -327,10 +310,6 @@ body {
 
 .banfootertext {
   width: 35%;
-}
-
-.speaker.hide {
-  display: none;
 }
 
 .section-title {
