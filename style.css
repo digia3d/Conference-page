@@ -1,0 +1,640 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --color-dark: #272a31;
+  --color-coral: #ec5242;
+  --text-coral: #f44c06;
+  --color-white: #fff;
+  --bg-gray: #d3d3d3;
+  --text-gray: #909090;
+  --text-darkgray: #565656;
+}
+
+* ::after,
+::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.logo {
+  animation-duration: 2.5s;
+  animation-name: spin;
+  animation-iteration-count: 1;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-p {
+  margin-left: -44vh;
+  margin-top: 1.3vh;
+  color: var(--text-darkgray);
+}
+
+.bannerho {
+  background-size: cover;
+  background-color: rgb(211, 211, 211, 0.4);
+  position: relative;
+}
+
+.bannerho::before {
+  content: "";
+  background-image: url(images/marketing.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.bancontentho {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  padding: 2px;
+}
+
+.banmsgho {
+  margin: 20px;
+  color: var(--text-coral);
+}
+
+.description {
+  width: 80%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-left: 10%;
+  border-style: solid;
+  border-color: var(--bg-gray);
+  background-color: var(--color-white);
+}
+
+.bancontent h4 {
+  font-weight: bold;
+  font-family: "lato", sans-serif;
+  text-decoration: underline;
+}
+
+.container {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fheading {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+}
+
+.abdesc {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  margin: 30px;
+  padding: 20px;
+}
+
+img {
+  border-style: none;
+}
+
+.container img {
+  width: 60%;
+  border-style: solid;
+  border-color: var(--bg-gray);
+  justify-self: center;
+  text-align: center;
+  align-items: center;
+  padding: 30px;
+  margin-left: 20%;
+}
+
+.ourplan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  padding: 50px 20px;
+  color: var(--color-white);
+  background: var(--color-dark);
+}
+
+.planheader {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.plancard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin: 1px;
+  list-style: none;
+  padding: 12px;
+  background: #3c3f46;
+  border: 2px solid #3c3f46;
+  transition: 0.3s ease-in-out;
+}
+
+.plancard:hover {
+  background: rgba(60, 63, 70, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 2px;
+  border: 2px solid var(--color-white);
+  transform: scale(1.02);
+}
+
+.plan-card {
+  flex-direction: column;
+}
+
+.planimg {
+  font-size: 32px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.plantitle {
+  width: 35%;
+  text-align: center;
+  padding: 5px;
+  color: var(--color-coral);
+}
+
+.planmore {
+  display: none;
+}
+
+.planbtn {
+  font-weight: 600;
+  color: var(--color-white);
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 20px 40px;
+  background: var(--color-coral);
+  border: none;
+  text-align: center;
+}
+
+.planbtn:hover {
+  color: var(--color-coral);
+  background: var(--color-white);
+  border: 2px solid var(--color-coral);
+}
+
+.plantext {
+  width: 50%;
+  text-align: left;
+}
+
+.factimg {
+  flex: 1;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+  max-height: 180px;
+  max-width: 180px;
+  background: url("images/A3D-LOGO.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 18px;
+  transition: 0.3s ease-in-out;
+}
+
+.factimg:hover {
+  transform: scale(1.5);
+}
+
+.factimg img {
+  display: block;
+  width: 85%;
+  height: 85%;
+}
+
+.facts {
+  flex-direction: column;
+  margin: 50px 0;
+}
+
+.fact {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.factinfo {
+  flex: 1.8;
+  height: auto;
+  padding: 2px;
+}
+
+.fact.hide {
+  display: none;
+}
+
+.facttitle p {
+  margin: 0 0 1em;
+  line-height: 1.4285em;
+}
+
+.factshead .section-title h2 {
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  line-height: 1.28571429em;
+  margin: calc(2rem - 014285714em) 0 1rem;
+  font-weight: 700;
+  padding: 0;
+  text-align: center;
+}
+
+.factname {
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  line-height: 1.28571429em;
+  margin: calc(2rem - 014285714em) 0 1rem;
+  font-weight: 700;
+  padding: 0;
+}
+
+.factlist ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 40px;
+}
+
+.fact li {
+  display: list-item;
+  text-align: center;
+}
+
+::marker {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0 !important;
+  text-align: start !important;
+  text-align-last: start !important;
+}
+
+.factslist {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 50px;
+  list-style-type: none;
+  padding: 0 4vw;
+}
+
+.facthead {
+  margin: 40px 0 20px;
+}
+
+.chevron {
+  color: var(--color-coral);
+}
+
+button,
+html [type=button] {
+  -webkit-appearance: button;
+}
+
+.morebtn {
+  background-color: var(--color-white);
+  width: 95%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-style: solid;
+  border-color: var(--bg-gray);
+  font-family: "lato", sans-serif;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.foologo {
+  width: 10%;
+  border: 1px solid black;
+}
+
+hr {
+  color: var(--bg-gray);
+}
+
+.foofooter {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+}
+
+.footertext {
+  color: black;
+}
+
+.section-title {
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  height: 1px;
+  width: 30px;
+  border-radius: 2px;
+  background: #ec5242;
+  transition: width 1s 5ms;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.partners {
+  background-color: var(--text-darkgray);
+  padding: 20px;
+  text-align: center;
+}
+
+.partnerhead {
+  text-align: center;
+  color: var(--text-gray);
+  font-size: 35px;
+}
+
+.partnerlogo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.parlogo {
+  width: 18%;
+  height: 30%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-white);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .bannerho {
+    min-height: 85vh;
+  }
+
+  .bannerho::before {
+    content: "";
+    background-size: cover;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 105vh;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .bancontentho {
+    padding: 30px;
+    text-align: left;
+  }
+
+  .bancontentho h1 {
+    margin-left: 50px;
+    font-size: 41px;
+    padding-left: 60px;
+    text-transform: uppercase;
+    color: #f44c06;
+  }
+
+  .bancontentho h2,
+  .bancontentho h4 {
+    margin-left: 110px;
+  }
+
+  .banmsgho {
+    padding: 10px;
+    font-size: 24px;
+    margin-left: 86px;
+  }
+
+  .toplinks {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    background-color: var(--text-darkgray);
+    color: var(--color-white);
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+
+  .sociallinks a {
+    color: var(--color-white);
+    margin: 5px;
+    width: 100%;
+  }
+
+  .menu-closebtn {
+    display: none;
+  }
+
+  .toplinks a {
+    color: var(--color-white);
+    margin: 5px;
+    width: 100%;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+
+  .item {
+    margin-right: 40px;
+  }
+
+  .list a {
+    color: var(--text-gray);
+  }
+
+  .item.active {
+    color: var(--color-coral);
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .logocontainer img {
+    display: block;
+    width: 11%;
+    margin-left: 5px;
+    margin-right: 5px;
+    animation-duration: 2.5s;
+    animation-name: spin;
+    animation-iteration-count: 1;
+  }
+
+  .facts {
+    flex-direction: column;
+    padding: 50px 40px;
+  }
+
+  .factslist {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    padding: 0 10vw;
+    list-style-type: none;
+  }
+
+  .fact.hide {
+    display: flex;
+  }
+
+  .morebtn {
+    display: none;
+  }
+
+  .planheader {
+    text-align: center;
+    justify-content: center;
+    color: var(--color-white);
+    padding: 50px;
+    padding-bottom: 10px;
+  }
+
+  .plancard {
+    list-style-type: none;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .planimg {
+    width: 100%;
+    text-align: center;
+  }
+
+  .planimg:hover {
+    transform: scale(1.02);
+  }
+
+  .plantitle {
+    text-align: center;
+    width: 100%;
+  }
+
+  .planmore {
+    display: block;
+    color: var(--color-white);
+    text-align: center;
+    margin: 50px;
+    text-decoration: underline;
+  }
+
+  .planmore:hover {
+    color: var(--color-coral);
+  }
+
+  .plan-card {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .planbtn {
+    display: none;
+  }
+
+  .plantext {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ourplan {
+    background-color: var(--color-dark);
+    padding: 50px 200px;
+  }
+
+  .partners {
+    background-color: var(--text-darkgray);
+    padding: 20px;
+  }
+
+  .partnerhead {
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 40px;
+  }
+
+  .partnerlogo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .parlogo {
+    width: 18%;
+    font-size: 20px;
+    height: 30%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .foulogo {
+    width: 10%;
+  }
+
+  .foofooter {
+    background-color: #fff;
+  }
+
+  .footertext {
+    color: var(--color-dark);
+    align-items: center;
+  }
+}
