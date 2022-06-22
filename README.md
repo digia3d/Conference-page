@@ -1,4 +1,6 @@
-# Capstone project
+# Capstone project 
+
+Loom link: [https://www.loom.com/share/f1b2f54ec37b4f7f859063a722de7b26]
 
 Original design idea by Cindy Shin in Behance.[https://www.behance.net/adagio07]
 

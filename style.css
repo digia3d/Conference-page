@@ -38,6 +38,93 @@
   color: var(--text-darkgray);
 }
 
+.toplinks {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: #f2e8e8cc;
+}
+
+.hamburger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  color: var(--text-darkgray);
+  margin: 10px;
+}
+
+i .fa-solid {
+  display: inline-block;
+  opacity: 1;
+  margin: 0 25rem 0 0;
+  width: 1.18em;
+  height: 1em;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: inherit;
+  text-align: center;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+i .fa-solid::before {
+  background: 0 0 !important;
+}
+
+.list.active {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  color: var(--color-white);
+  background: var(--color-dark);
+  z-index: 20;
+}
+
+.list.active .menu-closebtn {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+}
+
+.list.active .mitem {
+  color: var(--color-white);
+}
+
+.list.active .cbtn {
+  display: none;
+}
+
+.list.active li {
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.list .times.icon {
+  font-size: 20px;
+}
+
+.list.active a {
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+.list.active a:hover {
+  color: var(--color-coral);
+}
+
 .bannerho {
   background-size: cover;
   background-color: rgb(211, 211, 211, 0.4);
@@ -291,11 +378,6 @@ img {
   padding-inline-start: 40px;
 }
 
-.fact li {
-  display: list-item;
-  text-align: center;
-}
-
 ::marker {
   unicode-bidi: isolate;
   font-variant-numeric: tabular-nums;
@@ -415,6 +497,24 @@ hr {
     padding-right: 40px;
   }
 
+  .toplinks {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    background-color: var(--text-darkgray);
+    color: var(--color-white);
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+
+  .sociallinks a {
+    color: var(--color-white);
+    margin: 5px;
+    width: 100%;
+  }
+
   .bannerho {
     min-height: 85vh;
   }
@@ -454,24 +554,6 @@ hr {
     padding: 10px;
     font-size: 24px;
     margin-left: 86px;
-  }
-
-  .toplinks {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    background-color: var(--text-darkgray);
-    color: var(--color-white);
-    font-family: "Lato", sans-serif;
-    margin: 0;
-    justify-content: flex-end;
-    padding-right: 50px;
-  }
-
-  .sociallinks a {
-    color: var(--color-white);
-    margin: 5px;
-    width: 100%;
   }
 
   .menu-closebtn {

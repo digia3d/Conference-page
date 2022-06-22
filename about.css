@@ -22,7 +22,7 @@ body {
 .navbar {
   display: flex;
   flex-direction: row;
-  background-color: rgb(211, 211, 211, 0.8);
+  background-color: #ece3e3cc;
 }
 
 .hamburger {
@@ -124,6 +124,7 @@ body {
 
 .acontactinfo {
   padding: 10px;
+  text-align: center;
 }
 
 .description {
@@ -144,6 +145,7 @@ body {
 .bancontent h4 {
   margin: 0;
   padding: 35px;
+  text-align: center;
 }
 
 .facts {
@@ -453,11 +455,12 @@ body {
 
   .bancontent h4 {
     margin-left: 39%;
+    text-align: left;
   }
 
   .acontactinfo {
     width: 60%;
-    margin-left: 30%;
+    margin-left: 20%;
   }
 
   .bancontent h2 {
