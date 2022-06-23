@@ -60,6 +60,71 @@ body {
   color: var(--color-white);
 }
 
+.toplinks {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: #f2e8e8cc;
+}
+
+.hamburger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  color: var(--text-darkgray);
+  margin: 10px;
+}
+
+i .fa-solid {
+  display: inline-block;
+  opacity: 1;
+  margin: 0 25rem 0 0;
+  width: 1.18em;
+  height: 1em;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: inherit;
+  text-align: center;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+i .fa-solid::before {
+  background: 0 0 !important;
+}
+
+.list.active {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  color: var(--color-white);
+  background: var(--color-dark);
+  z-index: 20;
+}
+
+.list.active .menu-closebtn {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+}
+
+.list.active .mitem {
+  color: var(--color-white);
+}
+
 .list.active .cbtn {
   display: none;
 }
@@ -280,6 +345,99 @@ body {
   justify-content: space-around;
 }
 
+.factinfo {
+  flex: 1.8;
+  height: auto;
+  padding: 2px;
+}
+
+.fact.hide {
+  display: none;
+}
+
+.facttitle p {
+  margin: 0 0 1em;
+  line-height: 1.4285em;
+}
+
+.factshead .section-title h2 {
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  line-height: 1.28571429em;
+  margin: calc(2rem - 014285714em) 0 1rem;
+  font-weight: 700;
+  padding: 0;
+  text-align: center;
+}
+
+.factname {
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  line-height: 1.28571429em;
+  margin: calc(2rem - 014285714em) 0 1rem;
+  font-weight: 700;
+  padding: 0;
+}
+
+.factlist ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 40px;
+}
+
+::marker {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0 !important;
+  text-align: start !important;
+  text-align-last: start !important;
+}
+
+.factslist {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 50px;
+  list-style-type: none;
+  padding: 0 4vw;
+}
+
+.facthead {
+  margin: 40px 0 20px;
+}
+
+.chevron {
+  color: var(--color-coral);
+}
+
+button,
+html [type=button] {
+  -webkit-appearance: button;
+}
+
+.morebtn {
+  background-color: var(--color-white);
+  width: 95%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-style: solid;
+  border-color: var(--bg-gray);
+  font-family: "lato", sans-serif;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.foologo {
+  width: 10%;
+  border: 1px solid black;
+}
+
+hr {
+  color: var(--bg-gray);
+}
+
 .parlogo {
   width: 18%;
   height: 30%;
@@ -323,4 +481,264 @@ body {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.partners {
+  background-color: var(--text-darkgray);
+  padding: 20px;
+  text-align: center;
+}
+
+.partnerhead {
+  text-align: center;
+  color: var(--text-gray);
+  font-size: 35px;
+}
+
+.partnerlogo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.parlogo {
+  width: 18%;
+  height: 30%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-white);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .toplinks {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    background-color: var(--text-darkgray);
+    color: var(--color-white);
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+
+  .sociallinks a {
+    color: var(--color-white);
+    margin: 5px;
+    width: 100%;
+  }
+
+  .bannerho {
+    min-height: 85vh;
+  }
+
+  .bannerho::before {
+    content: "";
+    background-size: cover;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 105vh;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .bancontentho {
+    padding: 30px;
+    text-align: left;
+  }
+
+  .bancontentho h1 {
+    margin-left: 50px;
+    font-size: 41px;
+    padding-left: 60px;
+    text-transform: uppercase;
+    color: #f44c06;
+  }
+
+  .bancontentho h2,
+  .bancontentho h4 {
+    margin-left: 110px;
+  }
+
+  .banmsgho {
+    padding: 10px;
+    font-size: 24px;
+    margin-left: 86px;
+  }
+
+  .menu-closebtn {
+    display: none;
+  }
+
+  .toplinks a {
+    color: var(--color-white);
+    margin: 5px;
+    width: 100%;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+
+  .item {
+    margin-right: 40px;
+  }
+
+  .list a {
+    color: var(--text-gray);
+  }
+
+  .item.active {
+    color: var(--color-coral);
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .logocontainer img {
+    display: block;
+    width: 11%;
+    margin-left: 5px;
+    margin-right: 5px;
+    animation-duration: 2.5s;
+    animation-name: spin;
+    animation-iteration-count: 1;
+  }
+
+  .facts {
+    flex-direction: column;
+    padding: 50px 40px;
+  }
+
+  .factslist {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    padding: 0 10vw;
+    list-style-type: none;
+  }
+
+  .fact.hide {
+    display: flex;
+  }
+
+  .morebtn {
+    display: none;
+  }
+
+  .planheader {
+    text-align: center;
+    justify-content: center;
+    color: var(--color-white);
+    padding: 50px;
+    padding-bottom: 10px;
+  }
+
+  .plancard {
+    list-style-type: none;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .planimg {
+    width: 100%;
+    text-align: center;
+  }
+
+  .planimg:hover {
+    transform: scale(1.02);
+  }
+
+  .plantitle {
+    text-align: center;
+    width: 100%;
+  }
+
+  .planmore {
+    display: block;
+    color: var(--color-white);
+    text-align: center;
+    margin: 50px;
+    text-decoration: underline;
+  }
+
+  .planmore:hover {
+    color: var(--color-coral);
+  }
+
+  .plan-card {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .planbtn {
+    display: none;
+  }
+
+  .plantext {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ourplan {
+    background-color: var(--color-dark);
+    padding: 50px 200px;
+  }
+
+  .partners {
+    background-color: var(--text-darkgray);
+    padding: 20px;
+  }
+
+  .partnerhead {
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 40px;
+  }
+
+  .partnerlogo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .parlogo {
+    width: 18%;
+    font-size: 20px;
+    height: 30%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .foulogo {
+    width: 10%;
+  }
+
+  .foofooter {
+    background-color: #fff;
+  }
+
+  .footertext {
+    color: var(--color-dark);
+    align-items: center;
+  }
 }
