@@ -172,7 +172,6 @@ hr {
   background: #ec5242;
   transition: width 1s 5ms;
   position: absolute;
-  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
