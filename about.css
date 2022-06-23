@@ -10,135 +10,54 @@
   --text-darkgray: #565656;
 }
 
-body {
-  font-family: "Lato", sans-serif;
-  width: 100%;
-}
-
-.toplinks {
-  display: none;
-}
-
-.navbar {
-  display: flex;
-  flex-direction: row;
-  background-color: rgb(211, 211, 211, 0.8);
-}
-
-.hamburger {
-  position: relative;
-  display: flex;
-  align-items: center;
-  font-size: 30px;
-  color: var(--text-darkgray);
-  margin: 10px;
-}
-
-.list.active {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 0;
-  width: 100%;
-  height: 100vh;
-  color: var(--color-white);
-  background: var(--color-dark);
-  z-index: 20;
-}
-
-.list.active .menu-closebtn {
-  display: flex;
-  flex-direction: row-reverse;
-  width: 100%;
-  padding: 10px;
-  text-align: right;
-}
-
-.list.active .mitem {
-  color: var(--color-white);
-}
-
-.list.active .cbtn {
-  display: none;
-}
-
-.list.active li {
-  margin: 15px 0;
-  font-size: 14px;
-}
-
-.list .times.icon {
-  font-size: 20px;
-}
-
-.list.active a {
-  font-size: 2rem;
-  color: var(--color-white);
-}
-
-.list.active a:hover {
-  color: var(--color-coral);
-}
-
 .banner {
+  min-height: 50vh;
+  background-color: rgb(211, 211, 211, 0.8);
   background-size: cover;
-  background-color: rgb(211, 211, 211, 0.4);
-  position: relative;
 }
 
 .banner::before {
   content: "";
-  background-image: url(images/Digital-Marketing.png);
-  background-repeat: no-repeat;
+  background: url("images/Home-page.png");
   background-size: cover;
   width: 100%;
-  opacity: 0.5;
+  opacity: 40%;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
+  height: 57vh;
   position: absolute;
   z-index: -1;
 }
 
 .bancontent {
-  padding: 10px;
-  font-weight: 700;
-  color: var(--text-darkgray);
-  z-index: 2;
-}
-
-.bancontent h1 {
-  background-size: cover;
-  background-image: url(images/Digital-Marketing.png);
-  text-transform: uppercase;
+  justify-content: center;
   text-align: center;
-  color: var(--color-coral);
-  opacity: 100%;
-  font-size: 2rem;
-  font-family: "COCOGOOSE", sans-serif;
-  font-weight: 900;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  padding: 2px;
 }
 
-.acontactinfo {
-  padding: 10px;
+.banmsg {
+  margin: 20px;
+  color: var(--text-coral);
 }
 
 .description {
-  font-size: 14px;
-  width: 100%;
-  padding: 10px;
+  width: 80%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-left: 10%;
   border-style: solid;
-  border-color: var(--color-white);
-  font-family: "Lato", sans-serif;
+  border-color: var(--bg-gray);
+  background-color: var(--color-white);
 }
 
-.bancontent h2 {
-  font-weight: 900;
-  width: 100%;
-  text-transform: uppercase;
+.acontactinfo {
+  width: 60%;
+  margin-left: 20%;
 }
 
 .bancontent h4 {
@@ -195,113 +114,48 @@ body {
   width: 100%;
 }
 
-.ourplan {
+.container {
+  margin: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: auto;
-  padding: 50px 20px;
-  color: var(--color-white);
-  background: var(--color-dark);
 }
 
-.planheader {
+.fheading {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 20px;
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
 }
 
-.plancard {
-  display: flex;
-  flex-direction: row;
+.fdesc {
+  justify-content: center;
+  text-align: center;
   align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  margin: 1px;
-  list-style: none;
-  padding: 12px;
-  background: #3c3f46;
-  border: 2px solid #3c3f46;
-}
-
-.plancard:hover {
-  background: rgba(60, 63, 70, 0.8);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 2px;
-  border: 2px solid var(--color-white);
-}
-
-.plan-card {
-  flex-direction: column;
-}
-
-.planimg {
-  font-size: 32px;
-  padding: 5px;
-  margin-top: 10px;
-}
-
-.plantitle {
-  width: 35%;
-  text-align: center;
-  padding: 5px;
-  color: var(--color-coral);
-}
-
-.planmore {
-  display: none;
-}
-
-.planbtn {
-  font-weight: 600;
-  color: var(--color-white);
-  font-size: 20px;
-  margin-top: 20px;
-  padding: 20px 40px;
-  background: var(--color-coral);
-  border: none;
-  text-align: center;
-}
-
-.planbtn:hover {
-  color: var(--color-coral);
-  background: var(--color-white);
-  border: 2px solid var(--color-coral);
-}
-
-.plantext {
-  width: 50%;
-  text-align: left;
-}
-
-.partners {
-  background-color: var(--text-darkgray);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  margin: 30px;
   padding: 20px;
-  text-align: center;
 }
 
-.partnerhead {
-  text-align: center;
-  color: var(--text-gray);
-  font-size: 35px;
-}
-
-.partnerlogo {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-around;
-}
-
-.parlogo {
-  width: 18%;
-  height: 30%;
+.container img {
+  width: 60%;
+  border-style: solid;
+  border-color: var(--bg-gray);
+  justify-self: center;
   text-align: center;
   align-items: center;
-  justify-content: center;
+  padding: 30px;
+  margin-left: 20%;
+}
+
+.foologo {
+  width: 20%;
+}
+
+hr {
+  color: var(--bg-gray);
 }
 
 .workscontainer {
@@ -328,15 +182,11 @@ body {
 }
 
 .one {
-  background-image: url(images/advertise.svg);
-  background-blend-mode: darken;
-  background-color: var(--text-gray);
+  background-image: url(img/orange.jpg);
 }
 
 .two {
-  background-image: url(images/cover.svg);
-  background-blend-mode: darken;
-  background-color: var(--text-gray);
+  background-image: url(img/phase.jpg);
 }
 
 .work h3 {
@@ -344,39 +194,22 @@ body {
   font-weight: bold;
   font-size: 22px;
   font-family: "lato", sans-serif;
-  color: #fff;
 }
 
 .work p {
   padding: 20px;
-  color: #fff;
 }
 
-.foofooter {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  padding: 20px;
-}
-
-.foologo {
-  width: 20%;
+.footer {
+  background-color: white;
 }
 
 .footertext {
-  width: 35%;
-}
-
-.inter.hide {
-  display: none;
+  color: black;
 }
 
 .section-title {
   position: relative;
-  padding-bottom: 10px;
 }
 
 .section-title::after {
@@ -387,250 +220,6 @@ body {
   background: #ec5242;
   transition: width 1s 5ms;
   position: absolute;
-  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-}
-
-@media only screen and (min-width: 768px) {
-  .navbar {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--color-white);
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  .facts {
-    flex-direction: column;
-    padding: 50px 40px;
-  }
-
-  .toplinks {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    background-color: var(--text-darkgray);
-    color: var(--color-white);
-    font-family: "Lato", sans-serif;
-    margin: 0;
-    justify-content: flex-end;
-    padding-right: 50px;
-  }
-
-  .sociallinks a {
-    color: var(--color-white);
-    margin: 5px;
-    width: 100%;
-  }
-
-  .menu-closebtn {
-    display: none;
-  }
-
-  .toplink a {
-    color: var(--color-white);
-    margin: 5px;
-    width: 100%;
-  }
-
-  .list {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: flex-end;
-    margin-top: 10px;
-  }
-
-  .item {
-    margin-right: 40px;
-  }
-
-  .list a {
-    color: var(--text-gray);
-  }
-
-  .item.active {
-    color: var(--color-coral);
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  .logocontainer img {
-    display: block;
-    width: 13%;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-
-  .planheader {
-    text-align: center;
-    justify-content: center;
-    color: var(--color-white);
-    padding: 50px;
-    padding-bottom: 10px;
-  }
-
-  .plancard {
-    list-style-type: none;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .planimg {
-    width: 100%;
-    text-align: center;
-  }
-
-  .plantitle {
-    text-align: center;
-    width: 100%;
-  }
-
-  .planmore {
-    display: block;
-    color: var(--color-white);
-    text-align: center;
-    margin: 50px;
-    text-decoration: underline;
-  }
-
-  .planmore:hover {
-    color: var(--color-coral);
-  }
-
-  .ourplan {
-    background-color: var(--color-dark);
-    padding: 50px 200px;
-  }
-
-  .plan-card {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .planbtn {
-    display: none;
-  }
-
-  .plantext {
-    width: 100%;
-    text-align: center;
-  }
-
-  .banner {
-    min-height: 85vh;
-  }
-
-  .banner::before {
-    content: "";
-    background-size: cover;
-    width: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 128vh;
-    position: absolute;
-    z-index: -1;
-  }
-
-  .interlist {
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 20px;
-    padding: 0 10vw;
-    list-style-type: none;
-  }
-
-  .morebtn {
-    display: none;
-  }
-
-  .bancontent {
-    padding: 100px;
-    font-family: "lato", sans-serif;
-  }
-
-  .banmsg {
-    font-size: 24px;
-  }
-
-  .description {
-    font-size: 14px;
-    width: 60%;
-    padding: 10px;
-    border-style: solid;
-    border-color: var(--color-white);
-    font-family: "lato", sans-serif;
-  }
-
-  .bancontent h2,
-  .bancontent h4 {
-    font-family: "lato", sans-serif;
-    padding: 35px;
-  }
-
-  .bancontent h1 {
-    font-size: 45px;
-    font-family: "COCOGOOSE", sans-serif;
-  }
-
-  .bancontent h4 {
-    margin-left: 39%;
-  }
-
-  .acontactinfo {
-    width: 60%;
-    margin-left: 30%;
-  }
-
-  .bancontent h2 {
-    font-weight: bolder;
-    color: var(--color-gray);
-  }
-
-  .partners {
-    background-color: var(--text-darkgray);
-    padding: 20px;
-  }
-
-  .partnerhead {
-    text-align: center;
-    color: var(--text-gray);
-    font-size: 40px;
-  }
-
-  .partnerlogo {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-  }
-
-  .parlogo {
-    width: 18%;
-    font-size: 20px;
-    height: 30%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .inter.hide {
-    display: flex;
-  }
-
-  .home {
-    display: none;
-  }
-
-  .cbtn {
-    border-style: solid;
-    border-color: var(--color-coral);
-    color: var(--color-coral);
-    background-color: var(--color-white);
-  }
 }
