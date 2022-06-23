@@ -10,54 +10,32 @@
   --text-darkgray: #565656;
 }
 
-body {
-  font-family: "Lato", sans-serif;
-  width: 100%;
+* ::after,
+::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
-.toplinks {
-  display: none;
+.logo {
+  animation-duration: 2.5s;
+  animation-name: spin;
+  animation-iteration-count: 1;
 }
 
-.navlinks {
-  display: flex;
-  flex-direction: row;
-  background-color: rgb(211, 211, 211, 0.8);
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.hamburger {
-  position: relative;
-  display: flex;
-  align-items: center;
-  font-size: 30px;
+.nav-p {
+  margin-left: -44vh;
+  margin-top: 1.3vh;
   color: var(--text-darkgray);
-  margin: 10px;
-}
-
-.list.active {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 0;
-  width: 100%;
-  height: 100vh;
-  color: var(--color-white);
-  background: var(--color-dark);
-  z-index: 20;
-}
-
-.list.active .menu-closebtn {
-  display: flex;
-  flex-direction: row-reverse;
-  width: 100%;
-  padding: 10px;
-  text-align: right;
-}
-
-.list.active .item {
-  color: var(--color-white);
 }
 
 .toplinks {
@@ -147,101 +125,95 @@ i .fa-solid::before {
   color: var(--color-coral);
 }
 
-.banner {
-  min-height: 50vh;
-  background-color: rgb(211, 211, 211, 0.8);
+.bannerho {
   background-size: cover;
+  background-color: rgb(211, 211, 211, 0.4);
+  position: relative;
 }
 
-.banner::before {
+.bannerho::before {
   content: "";
-  background: url("images/Home-page.png");
+  background-image: url(images/marketing.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   position: absolute;
   z-index: -1;
 }
 
-.bancontent {
-  padding: 10px;
-  font-weight: 700;
-  color: var(--text-darkgray);
-  z-index: 2;
+.bancontentho {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  padding: 2px;
 }
 
-.bancontent h1 {
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-family: "COCOGOOSE", sans-serif;
-  font-weight: 900;
+.banmsgho {
+  margin: 20px;
   color: var(--text-coral);
 }
 
 .description {
-  font-size: 14px;
-  width: 100%;
-  padding: 10px;
+  width: 80%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-left: 10%;
   border-style: solid;
-  border-color: var(--color-white);
-  font-family: "Lato", sans-serif;
-}
-
-.bancontent h2 {
-  font-weight: 900;
-  width: 100%;
-  text-transform: uppercase;
+  border-color: var(--bg-gray);
+  background-color: var(--color-white);
 }
 
 .bancontent h4 {
-  margin: 0;
-  padding: 35px;
+  font-weight: bold;
+  font-family: "lato", sans-serif;
+  text-decoration: underline;
 }
 
-.morebtn {
-  background-color: var(--color-white);
-  width: 95%;
-  margin-bottom: 30px;
-  margin-top: 30px;
+.container {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fheading {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+}
+
+.abdesc {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  margin: 30px;
+  padding: 20px;
+}
+
+img {
+  border-style: none;
+}
+
+.container img {
+  width: 60%;
   border-style: solid;
   border-color: var(--bg-gray);
-  font-family: "lato", sans-serif;
-  height: 50px;
-  margin-left: 10px;
-}
-
-.chevron {
-  color: var(--color-coral);
-}
-
-.banmsg {
-  font-weight: normal;
-  color: var(--text-coral);
-  background: url("img/homepageimg.png") no-repeat center center;
-  background-size: cover;
-  background-clip: content-box;
-  -webkit-text-fill-color: #ec5242;
-  -webkit-background-clip: text;
-  -webkit-font-smoothing: antialiased;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-.logocontainer img {
-  display: none;
-}
-
-.logomenu {
-  display: flex;
-  flex-direction: row;
-}
-
-.list {
-  display: none;
-  flex-direction: column;
-  list-style-type: none;
-  margin: 10px;
-  width: 100%;
+  justify-self: center;
+  text-align: center;
+  align-items: center;
+  padding: 30px;
+  margin-left: 20%;
 }
 
 .ourplan {
@@ -272,6 +244,7 @@ i .fa-solid::before {
   padding: 12px;
   background: #3c3f46;
   border: 2px solid #3c3f46;
+  transition: 0.3s ease-in-out;
 }
 
 .plancard:hover {
@@ -281,6 +254,7 @@ i .fa-solid::before {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 2px;
   border: 2px solid var(--color-white);
+  transform: scale(1.02);
 }
 
 .plan-card {
@@ -326,23 +300,40 @@ i .fa-solid::before {
   text-align: left;
 }
 
-.partners {
-  background-color: var(--text-darkgray);
-  padding: 20px;
-  text-align: center;
+.factimg {
+  flex: 1;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+  max-height: 180px;
+  max-width: 180px;
+  background: url("images/A3D-LOGO.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 18px;
+  transition: 0.3s ease-in-out;
 }
 
-.partnerhead {
-  text-align: center;
-  color: var(--text-gray);
-  font-size: 35px;
+.factimg:hover {
+  transform: scale(1.5);
 }
 
-.partnerlogo {
+.factimg img {
+  display: block;
+  width: 85%;
+  height: 85%;
+}
+
+.facts {
+  flex-direction: column;
+  margin: 50px 0;
+}
+
+.fact {
+  margin: 0;
   display: flex;
   flex-direction: row;
-  width: 100%;
-  justify-content: space-around;
 }
 
 .factinfo {
@@ -438,18 +429,10 @@ hr {
   color: var(--bg-gray);
 }
 
-.parlogo {
-  width: 18%;
-  height: 30%;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.banfooter {
+.foofooter {
+  background-color: white;
   display: flex;
   flex-direction: row;
-  width: fit-content;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -457,17 +440,12 @@ hr {
   padding: 20px;
 }
 
-.banlogo {
-  width: 20%;
-}
-
-.banfootertext {
-  width: 35%;
+.footertext {
+  color: black;
 }
 
 .section-title {
   position: relative;
-  padding-bottom: 10px;
 }
 
 .section-title::after {
