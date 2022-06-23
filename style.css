@@ -93,12 +93,7 @@ body {
   background: url("images/Home-page.png");
   background-size: cover;
   width: 100%;
-  opacity: 70%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 80vh;
+  opacity: 0.5;
   position: absolute;
   z-index: -1;
 }

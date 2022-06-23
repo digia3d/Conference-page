@@ -61,9 +61,57 @@
 }
 
 .bancontent h4 {
-  font-weight: bold;
+  margin: 0;
+  padding: 35px;
+}
+
+.facts {
+  flex-direction: column;
+  margin: 50px 0;
+}
+
+.facts h2 {
+  text-align: center;
+}
+
+.morebtn {
+  background-color: var(--color-white);
+  width: 95%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-style: solid;
+  border-color: var(--bg-gray);
   font-family: "lato", sans-serif;
-  text-decoration: underline;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.banmsg {
+  font-weight: normal;
+  color: var(--text-coral);
+  text-align: left;
+  background-clip: content-box;
+  -webkit-text-fill-color: #ec5242;
+  -webkit-background-clip: text;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.logocontainer img {
+  display: none;
+}
+
+.navmenu {
+  display: flex;
+  flex-direction: row;
+}
+
+.list {
+  display: none;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 10px;
+  width: 100%;
 }
 
 .container {
